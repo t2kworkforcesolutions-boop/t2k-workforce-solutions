@@ -1,1 +1,444 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#111111;
+    color:white;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(14px);
+    z-index:1000;
+    transition:.35s ease;
+}
+
+.logo img{
+    height:95px;
+    width:auto;
+    display:block;
+    transition:.3s ease;
+    filter:drop-shadow(0 0 12px rgba(249,115,22,.45));
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#F97316;
+}
+
+.btn-nav{
+    background:#F97316;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-nav:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 45px rgba(249,115,22,.45);
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.68),rgba(0,0,0,.82)),
+    url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:170px 8% 90px;
+}
+
+.hero-content{
+    max-width:1000px;
+}
+
+.hero-logo{
+    width:430px;
+    max-width:90%;
+    margin-bottom:35px;
+    filter:drop-shadow(0 0 35px rgba(249,115,22,.55));
+    animation:floatLogo 4s ease-in-out infinite;
+}
+
+.hero h1{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:80px;
+    letter-spacing:3px;
+    color:white;
+    line-height:1;
+}
+
+.hero h2{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:82px;
+    letter-spacing:3px;
+    color:#F97316;
+    line-height:1;
+    margin-bottom:30px;
+}
+
+.hero p{
+    font-size:21px;
+    color:#e6e6e6;
+    line-height:1.8;
+    margin:25px auto;
+}
+
+.hero-slogan{
+    color:#F97316;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:700;
+    font-size:18px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.btn-orange,
+.btn-white{
+    text-decoration:none;
+    padding:18px 42px;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s ease;
+}
+
+.btn-orange{
+    background:#F97316;
+    color:white;
+}
+
+.btn-white{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-orange:hover{
+    transform:translateY(-6px) scale(1.03);
+    box-shadow:0 25px 50px rgba(249,115,22,.45);
+}
+
+.btn-white:hover{
+    background:white;
+    color:#111111;
+    transform:translateY(-6px);
+}
+
+/* STATS */
+
+.stats{
+    padding:90px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    background:#171717;
+}
+
+.stat-card{
+    background:#202020;
+    padding:40px;
+    text-align:center;
+    border-radius:18px;
+    transition:.35s;
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 45px rgba(249,115,22,.25);
+    border:1px solid #F97316;
+}
+
+.stat-card h2{
+    font-size:52px;
+    color:#F97316;
+    margin-bottom:10px;
+    font-family:'Bebas Neue',sans-serif;
+}
+
+.stat-card p{
+    color:#d6d6d6;
+}
+
+/* SERVICES */
+
+.services{
+    padding:120px 8%;
+    background:#111111;
+    text-align:center;
+}
+
+.services h2,
+.audience h2,
+.why h2{
+    font-size:48px;
+    color:#F97316;
+    margin-bottom:20px;
+    font-family:'Bebas Neue',sans-serif;
+}
+
+.section-text{
+    max-width:700px;
+    margin:0 auto 60px;
+    color:#cfcfcf;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.service-grid,
+.audience-grid,
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.service-card,
+.audience-card,
+.why-card{
+    background:#1d1d1d;
+    padding:40px;
+    border-radius:20px;
+    transition:.35s;
+    cursor:pointer;
+}
+
+.service-card:hover,
+.audience-card:hover,
+.why-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 50px rgba(249,115,22,.28);
+    border:1px solid #F97316;
+}
+
+.icon{
+    font-size:55px;
+    color:#F97316;
+    margin-bottom:25px;
+    transition:.35s;
+}
+
+.service-card:hover .icon{
+    transform:scale(1.2) rotate(8deg);
+}
+
+.service-card h3,
+.audience-card h3,
+.why-card h3{
+    color:#F97316;
+    margin-bottom:20px;
+}
+
+.service-card p,
+.audience-card p,
+.why-card p{
+    color:#d6d6d6;
+    line-height:1.8;
+}
+
+/* AUDIENCE */
+
+.audience{
+    padding:120px 8%;
+    background:#171717;
+    text-align:center;
+}
+
+/* WHY */
+
+.why{
+    padding:120px 8%;
+    text-align:center;
+}
+
+/* CTA */
+
+.cta{
+    padding:120px 8%;
+    background:#F97316;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:54px;
+    margin-bottom:25px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 35px;
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0d0d0d;
+    padding:60px;
+    text-align:center;
+}
+
+.footer-logo{
+    height:80px;
+    margin-bottom:25px;
+}
+
+footer p{
+    margin:10px 0;
+    color:#bfbfbf;
+}
+
+/* ANIMATIONS */
+
+section{
+    opacity:0;
+    transform:translateY(80px);
+    transition:all .9s ease;
+}
+
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.hero{
+    opacity:1;
+    transform:none;
+}
+
+@keyframes floatLogo{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0);}
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+    nav ul,
+    .btn-nav{
+        display:none;
+    }
+
+    nav{
+        padding:12px 6%;
+    }
+
+    .logo img{
+        height:75px;
+    }
+
+    .hero{
+        padding-top:150px;
+    }
+
+    .hero-logo{
+        width:300px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero h2{
+        font-size:56px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+}
+.audience-card{
+    min-height:330px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.audience-card p{
+    margin-bottom:35px;
+}
+
+.audience-card .btn-orange{
+    margin-top:auto;
+}
+@media(max-width:950px){
+    .audience-card{
+        min-height:auto;
+    }
+
+    .hero{
+        min-height:100vh;
+    }
+
+    .stats,
+    .services,
+    .audience,
+    .why,
+    .cta{
+        padding:80px 6%;
+    }
+
+    .service-grid,
+    .audience-grid,
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn-orange,
+    .btn-white{
+        width:100%;
+        max-width:280px;
+        text-align:center;
+    }
+}
