@@ -930,3 +930,139 @@ section.show{
 /* Clickable service cards */
 .service-card { cursor: pointer; }
 .service-card:focus { outline: 2px solid #F97316; outline-offset: 4px; }
+/* ================================
+   MEET THE FOUNDER
+================================ */
+
+.founder-section {
+    padding: 90px 8%;
+    background: #0b0b0b;
+}
+
+.founder-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.founder-image {
+    position: relative;
+}
+
+.founder-image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #f97316;
+    border-radius: 18px;
+    top: 16px;
+    left: 16px;
+    z-index: 0;
+}
+
+.founder-image img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border-radius: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.founder-content {
+    position: relative;
+    z-index: 2;
+}
+
+.founder-label {
+    color: #f97316;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.founder-content h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 0.95;
+    color: #ffffff;
+    margin: 0 0 10px;
+}
+
+.founder-content h3 {
+    color: #f97316;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.founder-content p {
+    color: #d1d1d1;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.founder-content .founder-quote {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    border-left: 3px solid #f97316;
+    padding-left: 15px;
+    margin: 28px 0;
+}
+
+.founder-button {
+    display: inline-block;
+    background: #f97316;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 7px;
+    transition: 0.25s ease;
+}
+
+.founder-button:hover {
+    transform: translateY(-2px);
+    background: #ff8534;
+}
+
+
+/* Founder section mobile */
+
+@media (max-width: 800px) {
+
+    .founder-section {
+        padding: 65px 6%;
+    }
+
+    .founder-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .founder-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .founder-image::before {
+        top: 10px;
+        left: 10px;
+    }
+
+    .founder-content {
+        text-align: left;
+    }
+
+    .founder-content h2 {
+        font-size: 52px;
+    }
+}
