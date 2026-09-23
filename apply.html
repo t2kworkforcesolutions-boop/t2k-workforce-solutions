@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apply for Work | T2K Workforce Solutions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="T2K Workforce Solutions">
+    </a>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <a href="request-crew.html" class="btn-nav">Request a Crew</a>
+</nav>
+
+<main>
+
+    <section class="page-hero">
+        <h1>Apply for Work</h1>
+
+        <p>
+            Join the T2K Workforce Solutions applicant network and be considered
+            for construction, cleanup, demolition, landscaping, warehouse,
+            general labor, and skilled-trade opportunities.
+        </p>
+    </section>
+
+    <section class="form-section">
+
+        <div class="form-container">
+
+            <div class="form-intro">
+                <p class="eyebrow">Workforce Application</p>
+
+                <h2>Tell Us About Yourself</h2>
+
+                <p>
+                    Complete the application below as accurately as possible.
+                    Submitting this form does not guarantee employment or placement.
+                    Qualified applicants may be contacted as opportunities become available.
+                </p>
+            </div>
+
+            <form id="workerApplicationForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Legal Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workerPhone">Phone Number *</label>
+                        <input type="tel" id="workerPhone" name="workerPhone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workerEmail">Email Address *</label>
+                        <input type="email" id="workerEmail" name="workerEmail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State *</label>
+                        <input type="text" id="state" name="state" value="Texas" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="authorized">Authorized to Work in the U.S.? *</label>
+
+                        <select id="authorized" name="authorized" required>
+                            <option value="">Select one</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="driversLicense">Valid Driver's License? *</label>
+
+                        <select id="driversLicense" name="driversLicense" required>
+                            <option value="">Select one</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transportation">Reliable Transportation? *</label>
+
+                        <select id="transportation" name="transportation" required>
+                            <option value="">Select one</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experienceYears">Years of Experience *</label>
+
+                        <select id="experienceYears" name="experienceYears" required>
+                            <option value="">Select experience</option>
+                            <option>No Experience</option>
+                            <option>Less Than 1 Year</option>
+                            <option>1–3 Years</option>
+                            <option>3–5 Years</option>
+                            <option>5+ Years</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="tradeExperience">Primary Trade / Work Experience *</label>
+
+                        <select id="tradeExperience" name="tradeExperience" required>
+                            <option value="">Select your primary experience</option>
+                            <option>General Labor</option>
+                            <option>Construction Cleanup</option>
+                            <option>Demolition</option>
+                            <option>Landscaping</option>
+                            <option>Roofing</option>
+                            <option>Framing</option>
+                            <option>Drywall</option>
+                            <option>Painting</option>
+                            <option>Flooring</option>
+                            <option>Concrete</option>
+                            <option>Carpentry</option>
+                            <option>Welding</option>
+                            <option>Equipment Operation</option>
+                            <option>Forklift / Warehouse</option>
+                            <option>Electrical Helper</option>
+                            <option>Plumbing Helper</option>
+                            <option>HVAC Helper</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="skills">Skills & Additional Experience</label>
+
+                        <textarea
+                            id="skills"
+                            name="skills"
+                            rows="5"
+                            placeholder="Tell us about your experience, tools, equipment, trades, certifications, or specialized skills."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="osha">OSHA Certification</label>
+
+                        <select id="osha" name="osha">
+                            <option>None</option>
+                            <option>OSHA 10</option>
+                            <option>OSHA 30</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="otherCerts">Other Certifications</label>
+                        <input
+                            type="text"
+                            id="otherCerts"
+                            name="otherCerts"
+                            placeholder="Forklift, CDL, CPR, TWIC, etc."
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="availability">Work Availability *</label>
+
+                        <select id="availability" name="availability" required>
+                            <option value="">Select availability</option>
+                            <option>Full-Time</option>
+                            <option>Part-Time</option>
+                            <option>Temporary Projects</option>
+                            <option>Weekends</option>
+                            <option>Nights</option>
+                            <option>Flexible</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="availableDate">Available Start Date *</label>
+                        <input type="date" id="availableDate" name="availableDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="travelDistance">Maximum Travel Distance *</label>
+
+                        <select id="travelDistance" name="travelDistance" required>
+                            <option value="">Select distance</option>
+                            <option>Up to 25 Miles</option>
+                            <option>Up to 50 Miles</option>
+                            <option>Up to 75 Miles</option>
+                            <option>Up to 100 Miles</option>
+                            <option>100+ Miles</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="desiredPay">Desired Hourly Pay *</label>
+
+                        <select id="desiredPay" name="desiredPay" required>
+                            <option value="">Select range</option>
+                            <option>$15–18/hr</option>
+                            <option>$18–20/hr</option>
+                            <option>$20–25/hr</option>
+                            <option>$25–30/hr</option>
+                            <option>$30+/hr</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="drugScreen">Willing to Take a Drug Screening if Required? *</label>
+
+                        <select id="drugScreen" name="drugScreen" required>
+                            <option value="">Select one</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="backgroundCheck">Willing to Complete a Background Check if Required? *</label>
+
+                        <select id="backgroundCheck" name="backgroundCheck" required>
+                            <option value="">Select one</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="crewLead">Have You Led or Supervised a Crew?</label>
+
+                        <select id="crewLead" name="crewLead">
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="leadershipDetails">Leadership Experience</label>
+
+                        <textarea
+                            id="leadershipDetails"
+                            name="leadershipDetails"
+                            rows="4"
+                            placeholder="If yes, tell us about your crew lead, supervisor, foreman, or management experience."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emergencyName">Emergency Contact Name *</label>
+                        <input type="text" id="emergencyName" name="emergencyName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emergencyPhone">Emergency Contact Phone *</label>
+                        <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+                    </div>
+
+                    <div class="form-group form-group-full checkbox-group">
+
+                        <label>
+                            <input type="checkbox" id="applicantCertification" required>
+
+                            I certify that the information provided in this application
+                            is true and complete to the best of my knowledge. I understand
+                            that submitting this application does not guarantee employment,
+                            project assignment, or placement through T2K Workforce Solutions.
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <button type="submit" class="form-submit-button">
+                    Submit Application
+                </button>
+
+                <p class="form-note">
+                    During this launch version, submitting the application will open an
+                    email draft containing your application details. Please send that email
+                    to complete your submission.
+                </p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <img src="images/logo.png" alt="T2K Workforce Solutions" class="footer-logo">
+
+    <p>Connecting People. Powering Projects.</p>
+
+    <p>Serving the Dallas–Fort Worth Metroplex</p>
+
+    <p>© 2026 T2K Workforce Solutions. All rights reserved.</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
