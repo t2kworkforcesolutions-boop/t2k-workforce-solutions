@@ -22,6 +22,36 @@ document.addEventListener("DOMContentLoaded", () => {
     // Navbar background on scroll
     const nav = document.querySelector("nav");
 
+    // Mobile hamburger navigation
+    const menuToggle = document.querySelector(".menu-toggle");
+
+    if (nav && menuToggle) {
+        menuToggle.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("menu-open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("menu-open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+                menuToggle.textContent = "☰";
+            });
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 950) {
+                nav.classList.remove("menu-open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+                menuToggle.textContent = "☰";
+            }
+        });
+    }
+
     if (nav) {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 60) {
