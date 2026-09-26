@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Request a Crew | T2K Workforce Solutions</title>
+    <title>Start a Project | T2K Workforce Solutions</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,25 +23,26 @@
 
     <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
 
-<ul>
+    <ul>
         <li><a href="index.html">Home</a></li>
+        <li><a href="divisions.html">Divisions</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 
-    <a href="request-crew.html" class="btn-nav">Request a Crew</a>
+    <a href="request-crew.html" class="btn-nav">Start a Project</a>
 </nav>
 
 <main>
 
     <section class="page-hero">
-        <h1>Request a Crew</h1>
+        <h1>Start a Project</h1>
 
         <p>
-            Tell us about your project, workforce needs, location, and preferred
-            start date. T2K will review your request and contact you directly.
+            Tell us what you need — from additional workforce to complete project services.
+            T2K will route your request to the division that best fits the job.
         </p>
     </section>
 
@@ -50,14 +51,14 @@
         <div class="form-container">
 
             <div class="form-intro">
-                <p class="eyebrow">Contractor Workforce Request</p>
+                <p class="eyebrow">Project & Workforce Request</p>
 
                 <h2>Let’s Talk About Your Project</h2>
 
                 <p>
                     Complete the form below with as much detail as possible.
-                    Submitting a request does not guarantee worker availability
-                    or create a binding service agreement.
+                    Choose the division that best fits your needs. If you are unsure, select
+                    “Not Sure / Help Me Choose” and we’ll help route your request.
                 </p>
             </div>
 
@@ -67,8 +68,8 @@
                 <div class="form-grid">
 
                     <div class="form-group">
-                        <label for="companyName">Company Name *</label>
-                        <input type="text" id="companyName" name="companyName" required>
+                        <label for="companyName">Company / Organization <span class="optional-label">(if applicable)</span></label>
+                        <input type="text" id="companyName" name="companyName">
                     </div>
 
                     <div class="form-group">
@@ -91,6 +92,21 @@
                         <input type="text" id="jobAddress" name="jobAddress" required>
                     </div>
 
+                    <div class="form-group form-group-full division-select-group">
+                        <label for="division">Which T2K Division Best Fits Your Project? *</label>
+                        <select id="division" name="division" required>
+                            <option value="">Select a division</option>
+                            <option value="workforce">T2K Workforce — Labor & Crew Support</option>
+                            <option value="homes">T2K Homes — Renovation & Property Improvement</option>
+                            <option value="painting">T2K Painting — Interior, Exterior & Coatings</option>
+                            <option value="concrete">T2K Concrete — Concrete Projects & Support</option>
+                            <option value="landscaping">T2K Landscaping — Exterior & Landscape Services</option>
+                            <option value="commercial">T2K Commercial — Large-Scale & Industrial Projects</option>
+                            <option value="unsure">Not Sure / Help Me Choose</option>
+                        </select>
+                        <p class="field-help">Not sure? Choose “Help Me Choose” and describe the project below.</p>
+                    </div>
+
                     <div class="form-group">
                         <label for="serviceType">Service Needed *</label>
 
@@ -107,8 +123,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="workerCount">Number of Workers Needed *</label>
-                        <input type="number" id="workerCount" name="workerCount" min="1" required>
+                        <label for="workerCount">Number of Workers Needed <span class="optional-label">(if requesting labor)</span></label>
+                        <input type="number" id="workerCount" name="workerCount" min="1" placeholder="Leave blank for project-based work">
                     </div>
 
                     <div class="form-group">
@@ -166,13 +182,12 @@
                 </div>
 
                 <button type="submit" class="form-submit-button">
-                    Submit Crew Request
+                    Submit Project Request
                 </button>
 
                 <p class="form-note">
-                    This temporary launch form opens an email draft addressed to
-                    T2K Workforce Solutions. Please send the email to complete
-                    your request.
+                    Submitting this form opens an email draft addressed to T2K Workforce Solutions.
+                    Please send the email to complete your request.
                 </p>
 
             </form>

@@ -62,10 +62,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Crew request form
+    // Project / crew request form
     const crewRequestForm = document.getElementById("crewRequestForm");
 
     if (crewRequestForm) {
+        // Preselect a division when a visitor arrives from a division card.
+        const divisionSelect = document.getElementById("division");
+        const requestedDivision = new URLSearchParams(window.location.search).get("division");
+        const validDivisions = ["workforce", "homes", "painting", "concrete", "landscaping", "commercial", "unsure"];
+
+        if (divisionSelect && validDivisions.includes(requestedDivision)) {
+            divisionSelect.value = requestedDivision;
+        }
         crewRequestForm.addEventListener("submit", (event) => {
             event.preventDefault();
 
@@ -83,6 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const jobAddress =
                 document.getElementById("jobAddress")?.value.trim() || "";
+
+            const divisionElement = document.getElementById("division");
+            const division = divisionElement?.options[divisionElement.selectedIndex]?.text || "Not selected";
 
             const serviceType =
                 document.getElementById("serviceType")?.value || "";
@@ -106,11 +117,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("projectDetails")?.value.trim() || "";
 
             const subject = encodeURIComponent(
-                `Crew Request from ${companyName || contactName}`
+                `T2K Project Request - ${division} - ${companyName || contactName}`
             );
 
             const body = encodeURIComponent(
-`T2K WORKFORCE SOLUTIONS - CREW REQUEST
+`T2K WORKFORCE SOLUTIONS - PROJECT REQUEST
 
 Company Name: ${companyName}
 Contact Name: ${contactName}
@@ -118,8 +129,9 @@ Phone: ${phone}
 Email: ${email}
 
 Jobsite Address: ${jobAddress}
+T2K Division: ${division}
 Service Needed: ${serviceType}
-Number of Workers Needed: ${workerCount}
+Number of Workers Needed: ${workerCount || "Not applicable / Not sure"}
 Preferred Start Date: ${startDate}
 Preferred Start Time: ${startTime}
 Expected Project Duration: ${duration}

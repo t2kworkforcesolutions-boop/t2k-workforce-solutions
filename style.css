@@ -1126,7 +1126,7 @@ section.show{
         left:0;
         right:0;
         width:100%;
-        padding:18px 6% 12px;
+        padding:18px 6% 86px;
         background:#0d0d0d;
         border-top:1px solid rgba(249,115,22,.35);
         box-shadow:0 18px 35px rgba(0,0,0,.45);
@@ -1149,7 +1149,7 @@ section.show{
     nav .btn-nav{
         display:none;
         position:absolute;
-        top:calc(100% + 264px);
+        top:calc(100% + 324px);
         left:6%;
         right:6%;
         width:auto;
@@ -1166,4 +1166,196 @@ section.show{
     nav.menu-open .btn-nav{
         display:block;
     }
+}
+
+/* =====================================
+   T2K DIVISIONS
+===================================== */
+
+.divisions-section {
+    background: #0b0b0b;
+    padding: 90px 7%;
+}
+
+.divisions-intro {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.division-eyebrow {
+    color: #f97316;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.divisions-intro h2,
+.divisions-cta h2 {
+    font-family: "Bebas Neue", sans-serif;
+    color: #ffffff;
+    font-size: clamp(45px, 6vw, 70px);
+    margin: 8px 0 15px;
+}
+
+.divisions-intro > p:last-child {
+    color: #c7c7c7;
+    line-height: 1.8;
+}
+
+.divisions-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.division-card {
+    position: relative;
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 15px;
+    padding: 38px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.division-card:hover {
+    transform: translateY(-5px);
+    border-color: #f97316;
+}
+
+.division-number {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 75px;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.division-card h2 {
+    position: relative;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.division-card > p {
+    color: #bdbdbd;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.division-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+}
+
+.division-card li {
+    color: #eeeeee;
+    padding: 7px 0;
+    border-bottom: 1px solid #252525;
+}
+
+.division-card li::before {
+    content: "✓";
+    color: #f97316;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.division-button {
+    display: inline-block;
+    color: #f97316;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.division-button:hover {
+    color: #ffffff;
+}
+
+.division-commercial {
+    border: 1px solid #f97316;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(249, 115, 22, 0.10),
+            #151515 55%
+        );
+}
+
+.commercial-label {
+    display: inline-block;
+    color: #f97316 !important;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px !important;
+}
+
+.divisions-cta {
+    background: #111111;
+    text-align: center;
+    padding: 90px 7%;
+}
+
+.divisions-cta > p:not(.division-eyebrow) {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #c7c7c7;
+    line-height: 1.7;
+}
+
+
+/* DIVISIONS MOBILE */
+
+@media (max-width: 800px) {
+
+    .divisions-section {
+        padding: 65px 6%;
+    }
+
+    .divisions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .division-card {
+        padding: 30px 25px;
+    }
+
+    .division-card h2 {
+        font-size: 36px;
+    }
+
+    .division-number {
+        font-size: 60px;
+    }
+
+    .divisions-cta {
+        padding: 70px 6%;
+    }
+}
+
+
+/* ===== PROJECT REQUEST DIVISION SELECTOR ===== */
+.division-select-group select {
+    border-color: rgba(249,115,22,.55);
+}
+.optional-label {
+    color: #8f8f8f;
+    font-size: .82em;
+    font-weight: 400;
+}
+.field-help {
+    margin-top: 8px;
+    color: #9f9f9f;
+    font-size: 13px;
+    line-height: 1.5;
 }
